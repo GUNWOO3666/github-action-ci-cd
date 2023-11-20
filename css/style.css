@@ -1,0 +1,370 @@
+
+.hidden {
+    display:none;
+}
+/*Javascript에서 className 부여로 요소를 숨기기 위함*/
+
+*{
+    box-sizing: border-box;
+}
+body{
+    padding-top:300px;
+    font-family: 'Baloo Tammudu 2', 'Noto Sans KR', sans-serif;
+    
+    filter: brightness(var(--brightness));
+    
+}
+
+
+/* 다크 모드 스타일 */
+:root {
+    --text-color: #424755;
+    --filter: brightness(100%) blur(5px);
+    --opacity: 0.455; /* 레이어의 투명도 조절 */
+
+  }
+  
+  [data-user-color-scheme='dark'] {
+    --background-color: rgba(255,255,255,0.1);
+    --text-color: rgba(255,255,255,0.7);
+    --filter: brightness(30%) blur(3px);
+    --opacity: 1; /* 레이어의 투명도 조절 */
+
+  }
+
+#darkmode-btn {
+    font-size: 3rem;
+    position: fixed;
+    top: 1%;
+    left: 2%;
+    cursor: pointer;
+    color: var(--text-color);
+
+  }
+  
+  .darkmode-btn:hover {
+    opacity: .7;
+  }
+
+#background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('1.jpg');
+    background-size: cover;
+    
+    z-index: -1;
+}
+
+:root {
+    --brightness: 100%;
+}
+
+
+#bgImage{
+    position:absolute;
+    left:0;
+    top:0;
+
+	max-width:100%;
+    min-width:1880px;;
+    max-height:1400px;
+    min-height:1200px;
+    z-index:-10;
+    opacity: var(--opacity);
+    filter: var(--filter);
+
+
+	width:100%;
+
+    height:1400px;
+
+    object-fit: cover;
+    z-index:-5;
+    filter: brightness(30%);
+
+}
+
+#imagebutton {
+    position: fixed;
+    top: 40px;
+    left: 20px;
+    font-family: 'Arial';
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 1px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin: 15px;
+    border-radius: 5px;
+    text-align: center;
+
+}
+
+#brightenessbutton {
+    position: fixed;
+    width: 90px;
+    height: 24px;
+    top: 70px;
+    left: 21px;
+    font-family: 'Arial';
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 1px 21px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#login-form{
+    text-align:center;
+    color: rgba(255,255,255,0.1);
+    margin:0 auto;
+}
+    #login-form input:first-child{
+        text-align: center;
+        color: var(--text-color);
+        font-size:1.3rem;
+        padding: 10px;
+        width: 240px;
+        background-color: rgba(104, 104, 104, 0.3);
+        border:none;
+        transition: all, 0.4s;
+    }
+        #login-form input:first-child:hover{
+            background-color: rgba(255,255,255,0.4);
+        }   
+        #login-form input:hover::-webkit-input-placeholder{ /*placeholder color change*/
+            color: rgb(50, 50, 50);
+        }
+        #login-form input:first-child:focus{
+            outline:none;
+            border-bottom: 1px solid var(--text-color);
+            background-color:rgba(0,0,0,0);
+        }
+    #login-form input:nth-child(2){
+        margin-left:20px;
+        width:100px;
+        height:40px;
+        border-radius: 30px;
+        border:none;
+        background-color: rgba(104, 104, 104, 0.3);
+        color: var(--text-color);
+        font-size:1rem;
+        font-weight: 600;
+        box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+        outline: none;
+        cursor: pointer;
+        transition: all, 0.4s;
+    }
+    #login-form input:nth-child(2):hover{
+        background-color: rgba(255,255,255,0.4);
+        color: var(--text-color);
+    }
+        #login-form input:nth-child(2):active{
+            background-color:darkgray;
+            color: var(--text-color);
+            outline: none;
+        }
+
+#clock{
+    text-align: center;
+    height:260px;
+    font-size:8rem;
+    margin:10px;
+    color: var(--text-color);
+    padding:-100px;
+}
+#greeting{
+    margin: 0 auto;
+    text-align: center;
+    color: var(--text-color);
+    font-weight: 400;
+    font-size:2rem;
+    font-weight: 600;
+}
+#todo-form{
+    text-align: center;
+    margin-top:0px;
+}
+#todo-form input{
+    text-align: center;
+    color: var(--text-color);
+    font-size:1rem;
+    width: 540px;
+    height:40px;
+    background-color: rgba(104, 104, 104, 0.3);
+    font-weight: 500;
+    border:none;
+    margin-bottom:20px;
+    margin-top:-50px;
+    transition: all, 0.4s;
+}
+    #todo-form input:hover{
+        background-color: rgba(255,255,255,0.4);
+    }
+    #todo-form input:hover::-webkit-input-placeholder{ /*placeholder color change*/
+        color: rgb(50, 50, 50);
+    }
+    #todo-form input:focus{
+        outline:none;
+        border-bottom: 1px solid var(--text-color);
+        background-color:rgba(0,0,0,0);
+    }
+#todo-list{
+    text-align: center;
+}
+    #todo-list li{
+        list-style: none;
+        color: var(--text-color);
+        margin-top:40px;
+        margin-bottom:50px;
+        font-size:1rem;
+        width:540px;
+        margin: 0 auto;
+    }
+    #todo-list li:hover{
+        color:rgb(255, 166, 0);
+    }
+    #todo-list button{
+        margin-left:10px;
+        background-color: rgba(0,0,0,0);
+        outline: none;
+        color: var(--text-color);
+        font-weight: 700;
+        width:30px;
+        height:30px;
+        border:none;
+        font-size:1.2rem;
+    }
+    #todo-list button:hover{
+        cursor: pointer;
+    }
+#quotes{
+    text-align: left;
+    position:fixed;
+    bottom:20px;
+    margin-left: 36px;
+    font-size:0.8rem;
+    font-weight: 200;
+    color: var(--text-color);
+}
+#weather{
+    position:fixed;
+    top:20px;
+    right:36px;
+    color: var(--text-color);
+    font-size:0.9rem;
+    font-weight: 700;
+}
+    #weather:hover{
+        color:rgb(255, 166, 0);
+    }
+
+
+/* 디데이 계산기 스타일 */
+#countButton {
+    position: fixed;
+    top: 45px;
+    right: 20px;
+    font-family: 'Baloo Tammudu 2', sans-serif;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 0.5px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#countButton:hover {
+    background-color: rgb(255, 166, 0);
+}
+  
+#calendar { /* D-day 계산기(제목) */
+    position: fixed;
+    top: 40px;
+    right: 23px;
+    font-family: 'Baloo Tammudu 2', sans-serif;
+    text-align: center;
+    font-size: 1.5rem;
+    color:rgba(255,255,255,0.8);
+    margin: 10px;
+}
+
+#dateForm {
+    position: fixed;
+    top: 92px;
+    right: 350px;
+    text-align: center;
+    margin: 10px;
+    color:rgba(255,255,255,0.8);
+    
+}
+
+#targetDate { /* 2023-00-00 부분 */
+    position: fixed;
+    top: 90px;
+    right: 200px;
+    padding: 5px;
+    font-size: 1rem;
+    margin: 5px;
+    border: 4px solid rgba(255, 255, 255, 0.5); /* 둥근 사각형 테두리 */
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#dateForm button { 
+    position: fixed;
+    top: 95px;
+    right: 80px;
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0px 3px;
+    
+    
+}
+
+
+#dateForm button:hover {
+    background-color: rgb(255, 166, 0);
+}
+
+#result { /* D-day 결과 */
+    position: fixed;
+    top: 120px;
+    right: 40px;
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.781);
+}
+
+#resetButton {
+    right: 14px !important;
+    display: inline-block;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    padding: 7.5px 14.5px; /* 버튼 내부 여백 설정 */
+    cursor: pointer;
+}
+
+#resetButton:hover {
+    background-color: #19e263;
+}

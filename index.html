@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width" initial-scale="1.0">
+    <title>  </title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@500;600&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <script defer src="js/logins.js"></script>
+    <script defer src="js/clock.js"></script>
+    <script defer src="js/quotes.js"></script>
+    <script defer src="js/background.js"></script>
+    <script defer src="js/todo.js"></script>
+    <script defer src="js/weather.js"></script>
+    <script defer src="js/darkmode.js"></script>
+    <script defer src="js/calendar.js"></script>
+    <script defer src="js/brightness.js"></script>
+</head>
+<body>
+    <h1 id="greeting" class="hidden"></h1>
+    <form class="hidden" id="login-form">
+        <input required maxlength="15" type="text" placeholder="What is your name?">
+        <input type="submit" value="Login">
+    </form>
+    <!--html 자체 input 유효성 결과를 확인하기 위해서는 꼭 form 태그 안에 input을 사용해야함!
+    But, Submit시 페이지가 재시작(refresh) 됨-->
+    <h2 id="clock">00:00:00</h2>
+    <form id="todo-form">
+        <input type="text" placeholder="Write a To Do and Press Enter" required>
+    </form>
+    <ul id="todo-list">
+        <!--Javascript로 사용자 리스트 추가-->
+    </ul>
+    <div id ="quotes">
+        <span></span>
+        <span></span>
+    </div>
+    <div id="weather">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+
+    <!-- 다크 모드 -->
+    <span class="darkmode-btn" id="darkmode-btn"></span>
+
+    <!-- "count d-day" 버튼 -->
+    <button id="countButton">count D-day</button>
+    
+    <!-- 날짜 선택 탭 -->
+    <h3 id="calendar" class="hidden">D-day 계산기</h3>
+    <form id="dateForm" class="hidden">
+        <label for="targetDate">날짜: </label>
+        <!-- Date Picker를 사용하여 날짜 선택 -->
+        <input type="date" id="targetDate" name="targetDate">
+        <button id="calculateButton" type="button" onclick="calculateRemainingDays()">D-day 계산</button>
+        <!-- 초기화 버튼 -->
+        <button id="resetButton" class="hidden">❌</button>
+    </form>
+
+    <!-- 이미지 변경 버튼 -->
+    <button id="imagebutton">image</button>
+
+    <!-- 밝기 변경 버튼 -->
+    <div id="background"></div>
+    <button id="brightenessbutton">100%</button>
+      
+
+    
+    <div id="result"></div>
+
+   <!-- <a href="https://nomadcoders.co">Go to courses</a>-->
+</body>
+</html>
