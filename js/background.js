@@ -3,7 +3,7 @@
 // 핵심기능: array에서 랜덤한 숫자를 얻어 숫자에 따른 이미지를 body에 추가함
 
 const images = [
-    "1.jpg", "2.jpg", "3.jpg", "4.jpg"
+    "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"
 ]
 
 const chosenImage = images[Math.floor(Math.random() * images.length)];
