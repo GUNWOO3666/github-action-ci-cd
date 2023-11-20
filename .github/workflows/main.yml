@@ -7,7 +7,7 @@ on:
 
 # 환경설정
 env:
-  DOCKER_IMAGE: ghcr.io/${{ github.actor }}/github-action-auto
+  DOCKER_IMAGE: ghcr.io/gunwoo3666/github-action-auto
   VERSION: ${{ github.sha }}
   NAME: go_cicd
 
