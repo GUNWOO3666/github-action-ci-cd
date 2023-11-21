@@ -89,7 +89,7 @@ body{
 
 #imagebutton {
     position: fixed;
-    top: 80px;
+    top: 40px;
     left: 20px;
     font-family: 'Arial';
     background-color: rgba(255, 255, 255, 0.5);
@@ -108,7 +108,7 @@ body{
     position: fixed;
     width: 90px;
     height: 24px;
-    top: 110px;
+    top: 70px;
     left: 21px;
     font-family: 'Arial';
     background-color: rgba(255, 255, 255, 0.5);
